@@ -1,0 +1,42 @@
+﻿@model CarsApp.Models.Database.Brand
+@inject CarsApp.Models.Database.CarsAppContext context
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Информация</h1>
+
+<div>
+    <h4>Компания</h4>
+    <hr />
+    <dl class="row">
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>*@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+    </dl>
+</div>
+<div class="form-group">
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Отредактировать</a>
+    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id">Удалить</a>
+    <a asp-action="Index">Вернуться к списку</a>
+</div>
+
+@{
+    Html.RenderPartial("~/Views/Models/List.cshtml", Model.Models);
+}

@@ -1,0 +1,43 @@
+﻿@model CarsApp.Models.Database.Brand
+
+@{
+    ViewData["Title"] = "Удаление марки";
+}
+
+<h3>Вы уверены что хотите удалить марку?</h3>
+<div>
+    <h4>Марка</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Models)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Models.Count)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeleteBrand">
+        <input type="hidden" asp-for=Id value=@Model.Id/>
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-action="Index">Вернуться к списку</a>
+    </form>
+</div>

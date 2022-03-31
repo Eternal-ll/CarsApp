@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CarsApp.Models.Database.Brand>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Модели</h4>
+
+<hr/>
+
+<div class="form-group">
+    <label>Поиск</label>
+    <input id="filterInput" type="text"/>
+    <a asp-action="Create" class="btn btn-primary">Добавить</a>
+</div>
+<class id="container">
+    @{
+        Html.RenderPartial("List", Model);
+    }
+</class>
+
+@section Scripts{
+    <script>
+        filterOnInput('filterInput', 'container', '@Url.Action("Filter", "Brands")');
+    </script>
+}
