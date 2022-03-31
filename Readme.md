@@ -23,3 +23,17 @@
 - Brands, поля: Id, Name, Active (не менее 8 записей в таблице);
 - Models, поля: Id, BrandId, Name, Active (по 3-5 записей на марку автомобиля.
 
+
+Results
+-
+
+![]("Images/1.png")
+![]("Images/2.png")
+![]("Images/3.png")
+![]("Images/4.png")
+![]("Images/5.png")
+![]("Images/6.png")
+![]("Images/7.png")
+![]("Images/8.png")
+![]("Images/9.png")
+![]("Images/10.png")
